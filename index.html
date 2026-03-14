@@ -473,7 +473,7 @@
   #experience { padding: 120px 0; background: var(--surface); border-top: 1px solid var(--border); }
   .timeline { position: relative; padding-left: 32px; }
   .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--accent), transparent); }
-  .timeline-item { position: relative; margin-bottom: 48px; opacity: 0; transform: translateX(-20px); transition: all 0.5s; }
+  .timeline-item { position: relative; margin-bottom: 48px; opacity: 1; transform: translateX(0); transition: all 0.5s; }
   .timeline-item.visible { opacity: 1; transform: translateX(0); }
   .timeline-dot { position: absolute; left: -38px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 3px solid var(--surface); box-shadow: 0 0 0 1px var(--accent); }
   .timeline-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }
@@ -530,8 +530,8 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.hidden { opacity: 0; transform: translateY(32px); }
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
@@ -588,9 +588,9 @@
           <a href="#contact" class="btn btn-ghost">Get in Touch</a>
         </div>
         <div class="hero-links">
-          <a href="mailto:muhaiminsamit@gmail.com">
+          <a href="/cdn-cgi/l/email-protection#92ffe7faf3fbfffbfce1f3fffbe6d2f5fff3fbfebcf1fdff">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
-            muhaiminsamit@gmail.com
+            <span class="__cf_email__" data-cfemail="ec8199848d858185829f8d818598ac8b818d8580c28f8381">[email&#160;protected]</span>
           </a>
           <div class="sep"></div>
           <a href="https://scholar.google.com/citations?user=PS_CX0AAAAAJ" target="_blank">Google Scholar</a>
@@ -948,20 +948,46 @@
   <p>PhD Candidate · University of Notre Dame · South Bend, IN</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+  // Scroll progress bar
   window.addEventListener('scroll', () => {
     const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
     document.getElementById('scrollBar').style.width = pct + '%';
   });
 
+  // Cursor glow
   const cursor = document.getElementById('cursorGlow');
   document.addEventListener('mousemove', e => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
   });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  // Scroll reveal — add hidden via JS so content always visible without JS
+  const revealEls = document.querySelectorAll('.reveal');
+  revealEls.forEach(el => el.classList.add('hidden'));
 
-  document.querySelectorAll('.reveal, .timeline-item').forEach(el => observer.observe
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.remove('hidden');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -10px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.remove('hidden'));
+  }
+
+  // Research card mouse glow
+  document.querySelectorAll('.research-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+      card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+    });
+  });
+</script>
+</body>
+</html>
