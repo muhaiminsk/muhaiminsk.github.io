@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How Real Madrid Shut Down Barcelona’s Attack: The Clásico in Numbers</title>
+<meta name="description" content="Barcelona won 9 from 9 before the Clásico, then created 68% less xG against Real Madrid. A player-level breakdown of what changed, with every number checked against the data.">
+<link rel="canonical" href="https://muhaiminsk.github.io/clasico-analysis/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How Real Madrid Shut Down Barcelona’s Attack: The Clásico in Numbers">
+<meta property="og:description" content="Barcelona won 9 from 9 before the Clásico, then created 68% less xG against Real Madrid. A player-level breakdown of what changed.">
+<meta property="og:url" content="https://muhaiminsk.github.io/clasico-analysis/">
+<meta property="og:image" content="https://muhaiminsk.github.io/clasico-analysis/images/clasico_before_after_xg.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#ffffff;--text:#1b1f24;--muted:#5b636e;--line:#dfe3e8;--accent:#b4630a;--card:#f5f6f8}
+@media (prefers-color-scheme: dark){:root{--bg:#0f1318;--text:#e8eaed;--muted:#a3abb5;--line:#2a313a;--accent:#f2a541;--card:#171d25}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:18px/1.65 Georgia,"Times New Roman",serif;padding:0 20px 80px}
+main{max-width:720px;margin:0 auto}
+header{padding:56px 0 8px}
+h1{font:700 2.1rem/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;margin:0 0 14px;letter-spacing:-.01em}
+h2{font:700 1.45rem/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;margin:2.4em 0 .6em}
+.byline{font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--muted)}
+.byline a{color:var(--muted)}
+a{color:var(--accent)}
+p{margin:0 0 1.1em}
+ul{padding-left:1.3em;margin:0 0 1.2em}
+li{margin:.3em 0}
+figure{margin:1.8em 0}
+figure img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line)}
+figcaption{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--muted);margin-top:.6em}
+.table-wrap{overflow-x:auto;margin:1.4em 0}
+table{border-collapse:collapse;width:100%;font:15.5px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+th,td{text-align:left;padding:.6em .8em;border-bottom:1px solid var(--line)}
+th{background:var(--card);font-weight:600}
+.method{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1em 1.3em .4em;margin-top:1em}
+.cta{margin-top:2.4em;padding-top:1.4em;border-top:1px solid var(--line);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+footer{margin-top:2em;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>How Real Madrid Shut Down Barcelona’s Attack: The Clásico in Numbers</h1>
+<div class="byline">By Samit Muhaimin · 3 November 2026 · <a href="https://x.com/SamitOTB">@SamitOTB</a> · <a href="https://github.com/muhaiminsk/match-compare">Code on GitHub</a></div>
+</header>
+
+<h2>The result was fair. What vanished was Barcelona’s attack</h2>
+<p>Barcelona went into the Clásico having won all 9 of their La Liga games, 27 points from 27. Real Madrid had won 7 and lost 2, six points behind. Then the tables turned: Madrid won 2-1 at the Camp Nou.</p>
+<p>The score, 1-2 on 25 October 2026, matched the chances: Barcelona produced 1.19 xG, Madrid 1.95.</p>
+<p>The real story is what disappeared. In their 9 previous La Liga matches, Barcelona averaged 3.72 xG and conceded 0.97. Against Madrid they created 68% less and conceded twice as much.</p>
+
+<figure>
+<img src="images/clasico_before_after_xg.png" alt="Chart of xG created against xG conceded for Barcelona and Real Madrid. Barcelona moves from 3.72 created and 0.97 conceded to 1.19 and 1.95; Madrid moves from 2.46 and 1.00 to 1.95 and 1.19." width="1600" height="1091">
+<figcaption>Hollow circles are each team’s average in its 9 earlier La Liga matches; filled circles are the Clásico. Top right is better.</figcaption>
+</figure>
+
+<p>The drop showed up across the team:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Measure</th><th>Average of 9 earlier matches</th><th>vs Real Madrid</th></tr></thead>
+<tbody>
+<tr><td>xG created</td><td>3.72</td><td>1.19</td></tr>
+<tr><td>xG conceded</td><td>0.97</td><td>1.95</td></tr>
+<tr><td>Completed dribbles</td><td>14.2</td><td>8</td></tr>
+<tr><td>Duels won</td><td>55%</td><td>46%</td></tr>
+<tr><td>Average rating of the 9 regulars</td><td>7.63</td><td>6.78</td></tr>
+</tbody></table></div>
+
+<h2>Lamine Yamal was shut out as a creator, not as a shooter</h2>
+<figure>
+<img src="images/lineup.png" alt="Barcelona’s starting XI on a pitch, each player’s match rating in the Clásico against his usual rating, coloured by the change." width="1200" height="1700">
+<figcaption>Match ratings are the data provider’s own. Colour shows the change against each player’s usual rating.</figcaption>
+</figure>
+<p>Yamal still shot as often as usual, but he stopped setting up teammates. All figures are per 90 minutes, his average in the 9 earlier matches against this one:</p>
+<ul>
+<li><strong>Key passes:</strong> from an average of 4.01 to 0.00.</li>
+<li><strong>Expected assists (xA):</strong> from an average of 0.47 to 0.06.</li>
+<li><strong>Shots:</strong> from an average of 4.74 to 5.00.</li>
+<li><strong>Rating:</strong> from an average of 8.38 to 6.25, the biggest drop among Barcelona’s regulars.</li>
+</ul>
+<p>That pattern suggests Madrid were content to let him shoot and focused on cutting his passing lanes. The data shows the outcome; the match shows the method, with Marc Cucurella shadowing him.</p>
+<p>Anthony Gordon was the one creator who rose. His key passes per 90 went from an average of 1.81 to 4.24, and his xA from 0.19 to 0.33. It was not enough to replace what Yamal usually supplies.</p>
+
+<h2>More shots, worse shots</h2>
+<p>Barcelona kept shooting, but from poorer chances. The clearest case is Raphinha:</p>
+<figure>
+<img src="images/post3_shots.png" alt="Shots per 90 and xG per shot for Raphinha and Fermín, average before the Clásico against the Clásico. Raphinha’s shots double while his xG per shot falls from 0.45 to 0.05." width="1600" height="900">
+</figure>
+<div class="table-wrap"><table>
+<thead><tr><th>Player</th><th>Shots per 90 (avg before → this match)</th><th>xG per shot (avg before → this match)</th></tr></thead>
+<tbody>
+<tr><td>Raphinha</td><td>3.13 → 6.28</td><td>0.45 → 0.05</td></tr>
+<tr><td>Fermín</td><td>2.01 → 1.22</td><td>0.24 → 0.02</td></tr>
+</tbody></table></div>
+<p>Raphinha doubled his shot volume while each shot became worth about a ninth as much. His completed dribbles per 90 also fell from an average of 2.2 to 0.0. Fermín went the other way on volume: he shot less, from an average of 2.01 per 90 to 1.22, and his xG per shot fell from 0.24 to 0.02, so his shots were worth about a twelfth of usual. Gordon’s xG per 90 fell from an average of 0.45 to 0.15.</p>
+<p>Shooting more from worse positions is what a team does when it cannot get into good ones. It fits a Madrid side that defended its box and let Barcelona shoot from distance, though shot locations would confirm it.</p>
+
+<h2>The build-up lost its two main passers</h2>
+<p>As a team, Barcelona’s passing barely changed: 640 passes against an average of 697, and 88.9% accuracy against 90.6%. The drop was concentrated in the two players who usually start every move.</p>
+<figure>
+<img src="images/post4_buildup.png" alt="Completed passes per 90 for Rodri and Pau Cubarsí in the Clásico against their usual: Rodri 84.0 against 106.7, Cubarsí 73.0 against 98.8." width="1600" height="900">
+</figure>
+<div class="table-wrap"><table>
+<thead><tr><th>Player</th><th>Completed passes per 90 (avg before → this match)</th><th>Change</th><th>Rating (avg before → this match)</th></tr></thead>
+<tbody>
+<tr><td>Pau Cubarsí</td><td>98.8 → 73.0</td><td>-26%</td><td>7.54 → 6.54</td></tr>
+<tr><td>Rodri</td><td>106.7 → 84.0</td><td>-21%</td><td>7.77 → 6.61</td></tr>
+</tbody></table></div>
+<p>Rodri, usually the hub of Barcelona’s passing, was less instrumental than in other matches: about a fifth fewer completed passes, and his rating fell from an average of 7.77 to 6.61.</p>
+<p>When the centre-back and the deepest midfielder each lose about a quarter of their usual passing, the ball reaches the front line later and under more pressure. That matches what happened further forward: fewer dribbles, worse shots, and a creator who stopped creating.</p>
+
+<h2>Madrid’s side: give up the ball, win it back</h2>
+<p>Madrid did not beat Barcelona by attacking better than usual. They created 1.95 xG, below their own average of 2.46 in 9 earlier matches. They won by defending more actively and passing less.</p>
+<figure>
+<img src="images/post5_madrid.png" alt="Real Madrid in the Clásico against their own La Liga average: xG created down 21%, tackles up 38%, interceptions up 88%, and Valverde’s interceptions per 90 from 1.0 to 5.8." width="1600" height="900">
+</figure>
+<p>Defending went up sharply in midfield (per 90, average before → this match):</p>
+<ul>
+<li><strong>Federico Valverde:</strong> interceptions from 1.0 to 5.8.</li>
+<li><strong>Aurélien Tchouaméni:</strong> tackles from 1.8 to 5.0, duels won from 3.0 to 6.0.</li>
+<li><strong>Jude Bellingham:</strong> duels won from 8.4 to 13.0.</li>
+</ul>
+<p>Their own passing fell, as you would expect from a side that ceded the ball:</p>
+<ul>
+<li><strong>Dean Huijsen:</strong> completed passes from 68.9 to 38.0.</li>
+<li><strong>Ibrahima Konaté:</strong> completed passes from 53.4 to 26.0.</li>
+<li><strong>Bernardo Silva:</strong> completed passes from 71.5 to 24.8.</li>
+</ul>
+<p>As a team, Madrid made 22 tackles against an average of 15.9, and 14 interceptions against an average of 7.4. They caught Barcelona offside 3 times; their opponents were usually caught 1.0 times per match.</p>
+<p>Madrid’s surge in midfield ball-winning came in the same match as Yamal’s creative collapse. That timing fits a plan built around cutting off his supply, but these statistics cannot show who marked whom. The match answers it: Marc Cucurella shadowed Yamal and did a great job keeping him in his pocket.</p>
+
+<h2>How this was measured, and what it cannot tell you</h2>
+<div class="method">
+<ul>
+<li><strong>Data:</strong> per-player match statistics from Highlightly, including ratings, passes, dribbles, duels and xG. Ratings are the provider’s own.</li>
+<li><strong>Baseline:</strong> each team’s 9 earlier La Liga matches this season. Player figures are per 90 minutes, for players with at least 60 minutes in this match and at least 200 minutes in the earlier matches.</li>
+<li><strong>What counts as a change:</strong> it must be large in both absolute and percentage terms, and only statistics relevant to the player’s position are judged. A forward is never judged on tackles.</li>
+<li><strong>One match is one match.</strong> These are hypotheses about what changed, not proof of why.</li>
+<li><strong>xG depends on the model.</strong> Understat’s model had this match at 1.64 to 1.95; the direction is the same.</li>
+<li><strong>Context:</strong> the Clásico came five days after Barcelona’s 4-2 Champions League defeat at PSG.</li>
+</ul>
+</div>
+
+<div class="cta">
+<p>The analysis was produced with <strong>Match Compare</strong>, an open tool I built that compares any match with a team’s other matches and checks every number in its written summaries against the data. <a href="https://samitontheball.streamlit.app">Try the tool</a> · <a href="https://github.com/muhaiminsk/match-compare">Read the code</a></p>
+</div>
+<footer>Data: Highlightly (player statistics and xG), Understat (xG cross-check). More at <a href="https://x.com/SamitOTB">@SamitOTB</a>.</footer>
+</main>
+</body>
+</html>
