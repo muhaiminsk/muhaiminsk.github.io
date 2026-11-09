@@ -362,10 +362,8 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#media">Media</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#builds">Applied AI</a></li>
+    <li><a href="#research">Projects</a></li>
     <li><a href="#sports">Sports Analytics</a></li>
-    <li><a href="#past-projects">Past Projects</a></li>
     <li><a href="#presentations">Presentations</a></li>
     <li><a href="#service">Service</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -624,9 +622,11 @@
 <section id="research">
   <div class="container">
     <div class="section-header reveal">
-      <p class="section-label">Research Projects</p>
-      <h2 class="section-title">Current Work</h2>
+      <p class="section-label">Projects</p>
+      <h2 class="section-title">Research and Builds</h2>
     </div>
+    <h3 id="phd-research" class="reveal" style="font-size:1.25rem;margin:64px 0 8px;scroll-margin-top:90px;">PhD Research</h3>
+    <p class="reveal" style="color:var(--muted); font-size:0.95rem; margin-bottom:28px; max-width:640px;">Trustworthy and privacy-preserving AI at the University of Notre Dame.</p>
     <div class="research-grid">
       <div class="research-card reveal">
         <div class="research-num">PROJECT 01</div>
@@ -665,17 +665,11 @@
         <div class="research-result"><a href="https://arxiv.org/abs/2610.15626" target="_blank" style="color:inherit;text-decoration:none;">arXiv preprint 2026 · attacker accuracy 90.8% → 15.6%</a></div>
       </div>
     </div>
-  </div>
-</section>
-<section id="builds" style="padding: 120px 0; border-top: 1px solid var(--border);">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-label">Applied AI</p>
-      <h2 class="section-title">Agents and Grounded LLM Apps</h2>
-    </div>
+    <h3 id="builds" class="reveal" style="font-size:1.25rem;margin:64px 0 8px;scroll-margin-top:90px;">Applied AI Side Projects</h3>
+    <p class="reveal" style="color:var(--muted); font-size:0.95rem; margin-bottom:28px; max-width:640px;">Agents and LLM apps I build on my own time, each with an evaluation and its limits in the open.</p>
     <div class="research-grid">
       <div class="research-card reveal">
-        <div class="research-num">LLM AGENT</div>
+        <div class="research-num">SIDE PROJECT · LLM AGENT</div>
         <h3 class="research-title">Grid Triage Agent for HTCondor</h3>
         <p class="research-desc">An LLM agent that investigates failed and held HTCondor jobs through read-only tools over the job ad, event log, and job output. Every claim must cite the log line it rests on, and no suggested fix runs without a person's approval. On 20 labeled incidents, the guarded agent matched an unguarded baseline at 100% root-cause accuracy, halved unsupported claims (4% to 2%), and blocked all 5 planted prompt injections, at about 4 seconds per incident.</p>
         <div class="tag-list">
@@ -684,13 +678,45 @@
         <div class="research-result"><a href="https://github.com/muhaiminsk/grid-triage-agent" target="_blank" style="color:inherit;text-decoration:none;">Code on GitHub</a></div>
       </div>
       <div class="research-card reveal reveal-delay-1">
-        <div class="research-num">OPERATIONAL APP</div>
+        <div class="research-num">SIDE PROJECT · OPERATIONAL APP</div>
         <h3 class="research-title">311 Triage: Ontology-Driven Operations</h3>
         <p class="research-desc">An operational app built on an ontology over 50,000 live NYC 311 requests: 3 linked object types, a validated write-back reassign action with an audit log, and a sortable triage UI. A local 8B model got the top complaint count right in 0 of 20 ZIP codes on its own, and in 20 of 20 once counting moved into SQL, so the LLM only summarizes numbers the database computed.</p>
         <div class="tag-list">
           <span class="tag tag-teal">Ontology</span><span class="tag tag-blue">FastAPI</span><span class="tag tag-orange">DuckDB</span><span class="tag tag-teal">Ollama</span><span class="tag tag-blue">LLM Grounding</span>
         </div>
         <div class="research-result"><a href="https://github.com/muhaiminsk/311-triage-ontology-app" target="_blank" style="color:inherit;text-decoration:none;">Code on GitHub</a></div>
+      </div>
+    </div>
+    <h3 id="past-projects" class="reveal" style="font-size:1.25rem;margin:64px 0 8px;scroll-margin-top:90px;">Undergraduate Research</h3>
+    <p class="reveal" style="color:var(--muted); font-size:0.95rem; margin-bottom:28px; max-width:640px;">During my B.Sc. at IUT, I conducted research on intelligent control systems and power engineering — applying optimization algorithms and neural networks to real-world energy systems problems.</p>
+    <div class="research-grid">
+      <div class="research-card reveal">
+        <div class="research-num">UNDERGRAD PROJECT 01</div>
+        <h3 class="research-title">AI-Based Online Control for Interconnected Thermal Power Systems</h3>
+        <p class="research-desc">Designed an AI-based online control scheme for regulating interconnected two-area thermal power systems using advanced metaheuristic and ANN-based approaches for real-time load frequency control.</p>
+        <div class="tag-list"><span class="tag tag-teal">Power Systems</span><span class="tag tag-blue">ANN</span><span class="tag tag-orange">Control Theory</span><span class="tag tag-teal">MATLAB</span></div>
+        <div class="research-result"><a href="https://link.springer.com/article/10.1007/s13369-023-07995-3" target="_blank" style="color:inherit;text-decoration:none;">Published · Arabian Journal for Science and Engineering, 2023</a></div>
+      </div>
+      <div class="research-card reveal reveal-delay-1">
+        <div class="research-num">UNDERGRAD PROJECT 02</div>
+        <h3 class="research-title">Gradient-Based Optimized PID Controller for Load Frequency Control</h3>
+        <p class="research-desc">Developed an enhanced gradient-based metaheuristic-optimized controller for load frequency control of a two-area AGC system. Benchmarked against conventional PID tuning methods.</p>
+        <div class="tag-list"><span class="tag tag-teal">PID Control</span><span class="tag tag-blue">Metaheuristics</span><span class="tag tag-orange">AGC</span><span class="tag tag-teal">MATLAB</span></div>
+        <div class="research-result"><a href="https://link.springer.com/chapter/10.1007/978-3-031-16832-1_5" target="_blank" style="color:inherit;text-decoration:none;">Published · Engineering Applications of Modern Metaheuristics, 2022</a></div>
+      </div>
+      <div class="research-card reveal">
+        <div class="research-num">UNDERGRAD PROJECT 03</div>
+        <h3 class="research-title">Smart Parking Management System using FSM in VHDL</h3>
+        <p class="research-desc">Designed and implemented an automated vehicle access and exit control system for smart parking using a Finite State Machine architecture, fully described and simulated in VHDL.</p>
+        <div class="tag-list"><span class="tag tag-teal">VHDL</span><span class="tag tag-blue">FSM</span><span class="tag tag-orange">Digital Design</span><span class="tag tag-blue">Embedded Systems</span></div>
+        <div class="research-result"><a href="https://ieeexplore.ieee.org/abstract/document/9910305" target="_blank" style="color:inherit;text-decoration:none;">Published · IEEE RI2C 2022</a></div>
+      </div>
+      <div class="research-card reveal reveal-delay-1">
+        <div class="research-num">UNDERGRAD PROJECT 04 · B.Sc. Thesis</div>
+        <h3 class="research-title">PID &amp; Fractional Order PID for Two-Area AGC via Optimization &amp; ANNs</h3>
+        <p class="research-desc">B.Sc. thesis investigating PID and Fractional Order PID controller design for load frequency control of a two-area AGC system, tuned using optimization algorithms and artificial neural networks.</p>
+        <div class="tag-list"><span class="tag tag-teal">FOPID</span><span class="tag tag-blue">Neural Networks</span><span class="tag tag-orange">Optimization</span><span class="tag tag-teal">MATLAB</span></div>
+        <div class="research-result"><a href="https://repository.iutoic-dhaka.edu/items/e5ba4122-a2d2-4281-a6b6-568f42be4b49" target="_blank" style="color:inherit;text-decoration:none;">IUT Repository · 2022</a></div>
       </div>
     </div>
   </div>
@@ -729,45 +755,6 @@
           <span class="tag tag-teal">xG</span><span class="tag tag-blue">Per-90 Analysis</span><span class="tag tag-orange">Player Ratings</span><span class="tag tag-teal">Matplotlib</span>
         </div>
         <div class="research-result"><a href="https://muhaiminsk.github.io/clasico-analysis/" target="_blank" style="color:inherit;text-decoration:none;">Read the write-up</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="past-projects" style="padding: 120px 0; border-top: 1px solid var(--border);">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-label">Past Projects</p>
-      <h2 class="section-title">Undergraduate Research</h2>
-    </div>
-    <p class="reveal" style="color:var(--muted); font-size:0.95rem; margin-bottom:40px; max-width:640px;">During my B.Sc. at IUT, I conducted research on intelligent control systems and power engineering — applying optimization algorithms and neural networks to real-world energy systems problems.</p>
-    <div class="research-grid">
-      <div class="research-card reveal">
-        <div class="research-num">PAST PROJECT 01</div>
-        <h3 class="research-title">AI-Based Online Control for Interconnected Thermal Power Systems</h3>
-        <p class="research-desc">Designed an AI-based online control scheme for regulating interconnected two-area thermal power systems using advanced metaheuristic and ANN-based approaches for real-time load frequency control.</p>
-        <div class="tag-list"><span class="tag tag-teal">Power Systems</span><span class="tag tag-blue">ANN</span><span class="tag tag-orange">Control Theory</span><span class="tag tag-teal">MATLAB</span></div>
-        <div class="research-result"><a href="https://link.springer.com/article/10.1007/s13369-023-07995-3" target="_blank" style="color:inherit;text-decoration:none;">Published · Arabian Journal for Science and Engineering, 2023</a></div>
-      </div>
-      <div class="research-card reveal reveal-delay-1">
-        <div class="research-num">PAST PROJECT 02</div>
-        <h3 class="research-title">Gradient-Based Optimized PID Controller for Load Frequency Control</h3>
-        <p class="research-desc">Developed an enhanced gradient-based metaheuristic-optimized controller for load frequency control of a two-area AGC system. Benchmarked against conventional PID tuning methods.</p>
-        <div class="tag-list"><span class="tag tag-teal">PID Control</span><span class="tag tag-blue">Metaheuristics</span><span class="tag tag-orange">AGC</span><span class="tag tag-teal">MATLAB</span></div>
-        <div class="research-result"><a href="https://link.springer.com/chapter/10.1007/978-3-031-16832-1_5" target="_blank" style="color:inherit;text-decoration:none;">Published · Engineering Applications of Modern Metaheuristics, 2022</a></div>
-      </div>
-      <div class="research-card reveal">
-        <div class="research-num">PAST PROJECT 03</div>
-        <h3 class="research-title">Smart Parking Management System using FSM in VHDL</h3>
-        <p class="research-desc">Designed and implemented an automated vehicle access and exit control system for smart parking using a Finite State Machine architecture, fully described and simulated in VHDL.</p>
-        <div class="tag-list"><span class="tag tag-teal">VHDL</span><span class="tag tag-blue">FSM</span><span class="tag tag-orange">Digital Design</span><span class="tag tag-blue">Embedded Systems</span></div>
-        <div class="research-result"><a href="https://ieeexplore.ieee.org/abstract/document/9910305" target="_blank" style="color:inherit;text-decoration:none;">Published · IEEE RI2C 2022</a></div>
-      </div>
-      <div class="research-card reveal reveal-delay-1">
-        <div class="research-num">PAST PROJECT 04 · B.Sc. Thesis</div>
-        <h3 class="research-title">PID &amp; Fractional Order PID for Two-Area AGC via Optimization &amp; ANNs</h3>
-        <p class="research-desc">B.Sc. thesis investigating PID and Fractional Order PID controller design for load frequency control of a two-area AGC system, tuned using optimization algorithms and artificial neural networks.</p>
-        <div class="tag-list"><span class="tag tag-teal">FOPID</span><span class="tag tag-blue">Neural Networks</span><span class="tag tag-orange">Optimization</span><span class="tag tag-teal">MATLAB</span></div>
-        <div class="research-result"><a href="https://repository.iutoic-dhaka.edu/items/e5ba4122-a2d2-4281-a6b6-568f42be4b49" target="_blank" style="color:inherit;text-decoration:none;">IUT Repository · 2022</a></div>
       </div>
     </div>
   </div>
