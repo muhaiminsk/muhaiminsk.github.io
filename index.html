@@ -363,6 +363,7 @@
     <li><a href="#publications">Publications</a></li>
     <li><a href="#media">Media</a></li>
     <li><a href="#research">Research</a></li>
+    <li><a href="#builds">Applied AI</a></li>
     <li><a href="#sports">Sports Analytics</a></li>
     <li><a href="#past-projects">Past Projects</a></li>
     <li><a href="#presentations">Presentations</a></li>
@@ -413,7 +414,7 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p>I am a Ph.D. candidate in Computer Science and Engineering at the <strong>University of Notre Dame</strong>, Indiana, USA. I build AI systems that can be trusted, and I test them by attacking them first. My dissertation focuses on <strong>learning trustworthiness from contextual metadata</strong> to build secure and privacy-preserving intelligent systems.</p>
-        <p>As a <strong>PhD Research Intern at IBM Research Europe, Dublin</strong>, I built <strong>ConTrust</strong>, a Bayesian source-credibility layer for IBM's proprietary <strong>FactReasoner</strong> pipeline. It beat six competing systems on balanced accuracy across three fact-checking datasets and exposed label bias in baselines that led on raw accuracy.</p>
+        <p>As a <strong>Student Intern at IBM Research Europe, Dublin</strong>, I built <strong>ConTrust</strong>, a Bayesian source-credibility layer for IBM's proprietary <strong>FactReasoner</strong> pipeline. It beat six competing systems on balanced accuracy across three fact-checking datasets and exposed label bias in baselines that led on raw accuracy.</p>
         <p>My research spans <strong>LLM jailbreak defense</strong> (GCG attack success cut to 12.5%), <strong>VR user privacy</strong> from encrypted network traffic (91% activity identification), and <strong>Riemannian geometry-based defenses for EEG brain-computer interfaces</strong> (cross-session re-identification cut from 90.8% to 15.6% and 9.9% on two public datasets, with no learned privacy model). You can find my publications on my <a href="https://scholar.google.com/citations?user=oKWIL8IAAAAJ&hl=en" target="_blank" style="color:var(--accent); text-decoration:none; border-bottom: 1px solid rgba(74,244,200,0.3);">Google Scholar profile</a>.</p>
         <p>Before joining Notre Dame, I worked as a <strong>Service Operations Engineer at bKash Limited</strong>, Bangladesh's largest fintech company, where I monitored mission-critical operations, applied software QA methodologies, and operated AWS infrastructure at scale.</p>
       </div>
@@ -450,8 +451,8 @@
       <div class="timeline-item">
         <div class="timeline-dot" style="background:var(--accent2);box-shadow:0 0 0 1px var(--accent2);border-color:var(--surface);"></div>
         <div class="timeline-header">
-          <span class="timeline-role">PhD Research Intern</span>
-          <span class="timeline-period">May 2026 — Aug 2026</span>
+          <span class="timeline-role">Student Intern</span>
+          <span class="timeline-period">May 2026 — Jul 2026</span>
         </div>
         <div class="timeline-org" style="color:var(--accent2);">IBM Research Europe · Dublin, Ireland</div>
         <ul class="timeline-points">
@@ -666,6 +667,34 @@
     </div>
   </div>
 </section>
+<section id="builds" style="padding: 120px 0; border-top: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Applied AI</p>
+      <h2 class="section-title">Agents and Grounded LLM Apps</h2>
+    </div>
+    <div class="research-grid">
+      <div class="research-card reveal">
+        <div class="research-num">LLM AGENT</div>
+        <h3 class="research-title">Grid Triage Agent for HTCondor</h3>
+        <p class="research-desc">An LLM agent that investigates failed and held HTCondor jobs through read-only tools over the job ad, event log, and job output. Every claim must cite the log line it rests on, and no suggested fix runs without a person's approval. On 20 labeled incidents, the guarded agent matched an unguarded baseline at 100% root-cause accuracy, halved unsupported claims (4% to 2%), and blocked all 5 planted prompt injections, at about 4 seconds per incident.</p>
+        <div class="tag-list">
+          <span class="tag tag-teal">LLM Agents</span><span class="tag tag-blue">HTCondor</span><span class="tag tag-orange">Prompt Injection</span><span class="tag tag-teal">Evaluation</span><span class="tag tag-blue">Streamlit</span>
+        </div>
+        <div class="research-result"><a href="https://github.com/muhaiminsk/grid-triage-agent" target="_blank" style="color:inherit;text-decoration:none;">Code on GitHub</a></div>
+      </div>
+      <div class="research-card reveal reveal-delay-1">
+        <div class="research-num">OPERATIONAL APP</div>
+        <h3 class="research-title">311 Triage: Ontology-Driven Operations</h3>
+        <p class="research-desc">An operational app built on an ontology over 50,000 live NYC 311 requests: 3 linked object types, a validated write-back reassign action with an audit log, and a sortable triage UI. A local 8B model got the top complaint count right in 0 of 20 ZIP codes on its own, and in 20 of 20 once counting moved into SQL, so the LLM only summarizes numbers the database computed.</p>
+        <div class="tag-list">
+          <span class="tag tag-teal">Ontology</span><span class="tag tag-blue">FastAPI</span><span class="tag tag-orange">DuckDB</span><span class="tag tag-teal">Ollama</span><span class="tag tag-blue">LLM Grounding</span>
+        </div>
+        <div class="research-result"><a href="https://github.com/muhaiminsk/311-triage-ontology-app" target="_blank" style="color:inherit;text-decoration:none;">Code on GitHub</a></div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="sports" style="padding: 120px 0; border-top: 1px solid var(--border);">
   <div class="container">
     <div class="section-header reveal">
@@ -816,7 +845,7 @@
           <div class="pub-body">
             <div class="pub-title" style="font-size:0.98rem;">Bangladeshi Student Association of Notre Dame</div>
             <div class="pub-authors" style="margin-bottom:8px;">University of Notre Dame</div>
-            <div class="pub-venue" style="font-style:normal;color:var(--muted);font-size:0.88rem;">Active member contributing to the planning and organization of cultural and social events, fostering community engagement and student networking within the Notre Dame Bangladeshi diaspora community.</div>
+            <div class="pub-venue" style="font-style:normal;color:var(--muted);font-size:0.88rem;">Board member contributing to the planning and organization of cultural and social events, fostering community engagement and student networking within the Notre Dame Bangladeshi diaspora community.</div>
             <div style="margin-top:12px;"><span class="tag tag-teal">Community</span></div>
           </div>
         </div>
@@ -825,7 +854,7 @@
           <div class="pub-body">
             <div class="pub-title" style="font-size:0.98rem;">Muslim Student Association of Notre Dame</div>
             <div class="pub-authors" style="margin-bottom:8px;">University of Notre Dame</div>
-            <div class="pub-venue" style="font-style:normal;color:var(--muted);font-size:0.88rem;">Contributed to organizing cultural and social events, supporting student well-being and interfaith community engagement on campus.</div>
+            <div class="pub-venue" style="font-style:normal;color:var(--muted);font-size:0.88rem;">Board member organizing cultural and social events, supporting student well-being and interfaith community engagement on campus.</div>
             <div style="margin-top:12px;"><span class="tag tag-blue">Community</span></div>
           </div>
         </div>
